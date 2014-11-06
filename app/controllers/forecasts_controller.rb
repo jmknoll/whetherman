@@ -10,7 +10,7 @@ class ForecastsController < ApplicationController
 
 	def create
 	#currently functioning as show method : / 
-		@forecast = Forecast.new(forecast_params)
+		@forecast = Forecast.new(forecast_params).fetch_forecast
 	end
 
 =begin

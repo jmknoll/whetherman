@@ -9,8 +9,8 @@ class Forecast < ActiveRecord::Base
 		weather_values(weather_hash)
 	end
 
-	def fetch_forecast(location)
-		HTTParty.get("http://api.wunderground.com/api/10cfa1d790a05aa4/hourly/q/"+location+".xml")
+	def fetch_forecast
+		HTTParty.get("http://api.wunderground.com/api/10cfa1d790a05aa4/hourly/q/"+self.location+".xml")
 	end
 
 	def weather_values(weather_hash)
