@@ -5,7 +5,7 @@
 			<div class="display-info">
 
 				<h1>Forecast Info</h1>
-				<%= @forecast.fetch_forecast("90210") %></p>
+				<%= @forecast.fetch_forecast(params[:forecast][:location]) %></p>
 
 			</div>
 		</div>

@@ -8,13 +8,19 @@ class ForecastsController < ApplicationController
 		@forecast = Forecast.new
 	end
 
-	def create 
+	def create
+	#currently functioning as show method : / 
 		@forecast = Forecast.new(forecast_params)
 	end
+
+=begin
 
 	def show
 		@forecast = Forecast.find(params[:id])
 	end
+
+=end
+
 
 	private
 
