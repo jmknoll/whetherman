@@ -7,11 +7,14 @@
 				<h3>The whetherman lets you know whether the temperature is going to drop, and whether you should bring a hoodie with you when you go out.</h3>
 			</div>
 			<div class="search-form">
-				<p>Input your zip code below:</p>
 
 				<%= form_for @forecast do |f| %>
-				  <p><%= f.text_field(:location, value: 19446) %></p>
-				  <p><%= submit_tag("Should I bring a hoodie?") %></p>
+				<div class="input-group">
+				  <p><%= f.label(:location, "Input your zip code below:") %></p>
+				  <p><%= f.text_field(:location, value: 19446, :class => "") %></p>
+				  <p><%= submit_tag("Should I bring a hoodie?", :class => "btn btn-default") %></p>
+				</div>
+				
 				<% end %>
 
 			</div>
