@@ -1,12 +1,17 @@
 <div class="container">
-	<div class="row">
+	<div class="row main-unit">
 		<div class="col-md-12">
+			<div class="intro-text">
+				<h2>No one likes getting caught out in the cold.</h2>
+			</br>
+				<h3>The whetherman lets you know whether the temperature is going to drop, and whether you should bring a hoodie with you when you go out.</h3>
+			</div>
 			<div class="search-form">
+				<p>Input your zip code below:</p>
 
 				<%= form_for @forecast do |f| %>
-				  <p><%= f.label(:location) %></p>
 				  <p><%= f.text_field(:location, value: 19446) %></p>
-				  <p><%= submit_tag("Get Weather Forecast") %></p>
+				  <p><%= submit_tag("Should I bring a hoodie?") %></p>
 				<% end %>
 
 			</div>
